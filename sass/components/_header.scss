@@ -57,7 +57,7 @@
   height: 100%;
   background-color: white;
   transform: translateX(100%);
-  transition: transform 250ms var(--transition-func);
+
   &.is-open {
     transform: translateX(0);
   }
@@ -98,6 +98,11 @@
   display: inline-block;
 
   padding: 20px 20px 20px 0;
+
+  &:is(:hover, :focus) {
+    color: var(--main-hover-color);
+    @extend %transition-for-active-elements;
+  }
 
   @media (min-width: 768px) {
     position: relative;
@@ -165,6 +170,13 @@
     }
   }
 }
+
+.address__link {
+  &:is(:hover, :focus) {
+    color: var(--main-hover-color);
+    @extend %transition-for-active-elements;
+  }
+}
 .social-network-list {
   display: flex;
 
@@ -177,6 +189,9 @@
     height: 40px;
     background-color: var(--main-accent-color);
     border-radius: 50%;
+    &:is(:hover, :focus) {
+      background-color: var(--secondary-hover-color);
+    }
   }
 }
 
