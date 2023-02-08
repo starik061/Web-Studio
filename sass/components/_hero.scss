@@ -1,0 +1,57 @@
+.hero {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 112px;
+  padding-bottom: 112px;
+  text-align: center;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7) 100%
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--main-title-color);
+
+  @media (min-width: 768px) {
+    padding-bottom: 108px;
+  }
+  @media (min-width: 1158px) {
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+}
+.hero-head {
+  max-width: 319px;
+  margin: 0 auto 72px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--main-bg-color);
+
+  @media (min-width: 768px) {
+    max-width: 496px;
+    margin-bottom: 40px;
+    font-size: 56px;
+    line-height: 1.07;
+  }
+  @media (min-width: 1158px) {
+    margin-bottom: 48px;
+  }
+}
+.hero-btn {
+  min-width: 169px;
+  padding: 16px 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: var(--main-accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
