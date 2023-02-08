@@ -1,0 +1,27 @@
+.doing-section {
+  @media (max-width: 1157px) {
+    display: none;
+  }
+  padding-top: 0;
+}
+
+.doing-title {
+  margin-bottom: 72px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--main-title-color);
+}
+
+.doing-list {
+  display: flex;
+}
+.doing-card {
+  width: calc((100% - 2.13% * 2) / 3);
+  margin-right: 2.13%;
+}
+.doing-card:nth-child(3n) {
+  margin-right: 0;
+}

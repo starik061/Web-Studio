@@ -7,9 +7,11 @@
   --text-color: #434455;
   --main-hover-color: #404bbf;
   --secondary-hover-color: #404bbf;
+  --customers-cards-color: #8e8f99;
   --transition-func: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 %transition-for-active-elements {
-  transition: color 250ms var(--transition-func);
+  transition: color 250ms var(--transition-func),
+    background-color 250ms var(--transition-func);
 }

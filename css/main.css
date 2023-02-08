@@ -7,11 +7,12 @@
   --text-color: #434455;
   --main-hover-color: #404bbf;
   --secondary-hover-color: #404bbf;
+  --customers-cards-color: #8e8f99;
   --transition-func: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address__link:is(:hover, :focus), .nav__menu-link:is(:hover, :focus) {
-  transition: color 250ms var(--transition-func);
+.customers-list__link, .hero-btn, .social-network-list__link, .address__link, .nav__menu-link {
+  transition: color 250ms var(--transition-func), background-color 250ms var(--transition-func);
 }
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -696,4 +697,163 @@ section {
 .benefits-list__text {
   font-weight: 500;
   color: var(--text-color);
+}
+
+.doing-section {
+  padding-top: 0;
+}
+@media (max-width: 1157px) {
+  .doing-section {
+    display: none;
+  }
+}
+
+.doing-title {
+  margin-bottom: 72px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--main-title-color);
+}
+
+.doing-list {
+  display: flex;
+}
+
+.doing-card {
+  width: 31.9133333333%;
+  margin-right: 2.13%;
+}
+
+.doing-card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.team-section {
+  background-color: var(--secondary-bg-color);
+  padding-bottom: 104px;
+}
+@media (min-width: 1158px) {
+  .team-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.team-header {
+  margin-bottom: 72px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .team-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+    row-gap: 64px;
+  }
+}
+
+.team-list__item {
+  width: 260px;
+  margin: 0 auto 72px;
+  padding-bottom: 32px;
+  background-color: var(--main-bg-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-list__item .social-network-list {
+  justify-content: center;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .team-list__item {
+    flex-basis: 264px;
+    margin: 0;
+  }
+}
+
+.team-list__photo {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.team-list__member-name {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.team-list__position {
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.customer-title {
+  margin-bottom: 72px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  row-gap: 42px;
+  max-width: 396px;
+  margin: 0 auto;
+  color: var(--customers-cards-color);
+}
+@media (min-width: 768px) {
+  .customers-list {
+    max-width: 552px;
+  }
+}
+@media (min-width: 1158px) {
+  .customers-list {
+    max-width: 100%;
+  }
+}
+
+.customers-list__link {
+  display: block;
+  flex-grow: 0;
+  padding: 15px 42px;
+  border: 1px solid var(--customers-cards-color);
+  border-radius: 4px;
+}
+.customers-list__link:is(:hover, :focus) {
+  color: var(--secondary-hover-color);
+  border-color: var(--secondary-hover-color);
+}
+@media (min-width: 768px) {
+  .customers-list__link {
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+}
+
+.customers-icon {
+  display: block;
+  fill: currentColor;
 }/*# sourceMappingURL=main.css.map */
