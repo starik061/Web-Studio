@@ -11,7 +11,7 @@
   --transition-func: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customers-list__link, .hero-btn, .social-network-list__link, .address__link, .nav__menu-link {
+.subscribe-btn, .customers-list__link, .hero-btn, .social-network-list__link, .address__link, .nav__menu-link {
   transition: color 250ms var(--transition-func), background-color 250ms var(--transition-func);
 }
 
@@ -330,12 +330,14 @@ button {
   }
 }
 
-section {
+section,
+footer {
   padding-top: 96px;
   padding-bottom: 96px;
 }
 @media (min-width: 1158px) {
-  section {
+  section,
+  footer {
     padding-top: 120px;
     padding-bottom: 120px;
   }
@@ -761,6 +763,12 @@ section {
     row-gap: 64px;
   }
 }
+@media (min-width: 768px) and (max-width: 1157px) {
+  .team-list {
+    max-width: 794px;
+    margin: 0 auto;
+  }
+}
 
 .team-list__item {
   width: 260px;
@@ -832,6 +840,9 @@ section {
 @media (min-width: 1158px) {
   .customers-list {
     max-width: 100%;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+    flex-wrap: nowrap;
   }
 }
 
@@ -856,4 +867,151 @@ section {
 .customers-icon {
   display: block;
   fill: currentColor;
+}
+
+footer {
+  color: #e7e9fc;
+  background-color: var(--main-text-color);
+}
+
+@media (min-width: 768px) {
+  footer .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 0 108px;
+  }
+}
+@media (min-width: 1158px) {
+  footer .main-container {
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0 16px;
+  }
+}
+
+footer .logo-link {
+  margin-bottom: 16px;
+  padding: 0;
+  color: var(--secondary-bg-color);
+}
+
+.footer-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 72px;
+}
+.footer-element:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .footer-element {
+    display: block;
+  }
+}
+@media (min-width: 1158px) {
+  .footer-element {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1158px) {
+  .footer-element:first-child {
+    margin-right: 120px;
+  }
+}
+@media (min-width: 1158px) {
+  .footer-element:nth-child(2) {
+    margin-right: 80px;
+  }
+}
+
+.footer-element__text {
+  width: 264px;
+}
+
+footer b {
+  display: block;
+  margin-bottom: 16px;
+}
+
+footer .social-network-list {
+  gap: 16px;
+}
+
+footer .social-network-list__link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer .social-network-list__link:hover,
+footer .social-network-list__link:focus {
+  background-color: #31d0aa;
+}
+
+.subscribe-form {
+  width: 100%;
+}
+
+.subscribe-form [type=email] {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  color: var(--main-bg-color);
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+@media (min-width: 768px) {
+  .subscribe-form [type=email] {
+    width: 268px;
+  }
+}
+
+@media (min-width: 768px) {
+  .subscribe-form-elements-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+.subscribe-form [type=email]::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-form [type=email]::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-btn {
+  margin: 0 auto;
+  padding: 8px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--main-bg-color);
+  background-color: var(--main-accent-color);
+  border: 0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.subscribe-btn:hover {
+  background-color: var(--secondary-hover-color);
+}
+
+.subscribe-btn:after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 2L0 13.25L7.66994 15.6172L19.5 6.375L10.5017 16.4913L10.509 16.4936L10.5 16.4913V22L14.8013 17.8183L20.2501 19.5L24 2Z' fill='white'/%3E%3C/svg%3E");
 }/*# sourceMappingURL=main.css.map */

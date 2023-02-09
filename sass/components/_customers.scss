@@ -22,6 +22,8 @@
   }
   @media (min-width: 1158px) {
     max-width: 100%;
+    column-gap: 24px;
+    flex-wrap: nowrap;
   }
 }
 
