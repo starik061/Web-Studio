@@ -101,7 +101,9 @@
     <main>
       <section class="hero">
         <h1 class="hero-head">Effective Solutions for Your Business</h1>
-        <button class="hero-btn" type="button">Order Service</button>
+        <button class="hero-btn" type="button" data-modal-open>
+          Order Service
+        </button>
       </section>
 
       <section class="benefits-section">
@@ -194,6 +196,7 @@
             <li class="team-list__item">
               <img
                 class="team-list__photo"
+                srcset="./images/team_1.jpg 1x, ./images/2x/team_1_2x.jpg 2x"
                 src="./images/team_1.jpg"
                 alt="team member"
               />
@@ -229,6 +232,7 @@
             <li class="team-list__item">
               <img
                 class="team-list__photo"
+                srcset="./images/team_2.jpg 1x, ./images/2x/team_2_2x.jpg 2x"
                 src="./images/team_2.jpg"
                 alt="team member"
               />
@@ -264,6 +268,7 @@
             <li class="team-list__item">
               <img
                 class="team-list__photo"
+                srcset="./images/team_3.jpg 1x, ./images/2x/team_3_2x.jpg 2x"
                 src="./images/team_3.jpg"
                 alt="team member"
               />
@@ -299,6 +304,7 @@
             <li class="team-list__item">
               <img
                 class="team-list__photo"
+                srcset="./images/team_4.jpg 1x, ./images/2x/team_4_2x.jpg 2x"
                 src="./images/team_4.jpg"
                 alt="team member"
               />
@@ -461,6 +467,74 @@
         </div>
       </footer>
     </main>
+
+    <!--                 Modal window            -->
+
+    <div class="overlay is-hidden" data-modal>
+      <div class="modal">
+        <form action="" class="contacts-form">
+          <b>Leave your contacts and we will call you back</b>
+          <div class="input-field">
+            <label for="contacts-form-name">Name</label>
+
+            <div class="input-wrapper">
+              <input id="contacts-form-name"" type="text" />
+              <svg width="18px" height="24px">
+                <use href="./images/icons.svg#modal-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="input-field">
+            <label for="contacts-form-phone">Phone</label>
+            <div class="input-wrapper">
+              <input id="contacts-form-phone"" type="text" />
+              <svg width="18px" height="24px">
+                <use href="./images/icons.svg#modal-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="input-field">
+            <label for="contacts-form-email">Email</label>
+
+            <div class="input-wrapper">
+              <input id="contacts-form-email"" type="text" />
+              <svg width="18px" height="24px">
+                <use href="./images/icons.svg#modal-email"></use>
+              </svg>
+            </div>
+          </div>
+          <label for="comments">Comment</label>
+          <textarea
+            name="comments"
+            id="comments"
+            placeholder="Text input"
+          ></textarea>
+
+          <label class="accept-checkbox-field">
+            <input
+              class="privacy-policy-checkbox visually-hidden"
+              type="checkbox"
+            />
+            <svg width="16px" height="16px">
+              <use href="./images/icons.svg#checkbox"></use>
+            </svg>
+            <p class="acceptence-policy-text">
+              I accept the terms and conditions of the
+              <a class="privacy-policy" href="">Privacy Policy</a>
+            </p>
+          </label>
+          <div class="contacts-form-button-field">
+            <button class="contacts-form-send-btn" type="submit">Send</button>
+          </div>
+        </form>
+        <button class="close-btn" type="button" data-modal-close>
+          <svg width="8px" height="8px">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
