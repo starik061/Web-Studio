@@ -439,6 +439,7 @@ footer {
   height: 100%;
   background-color: white;
   transform: translateX(100%);
+  transition: transform 250ms var(--transition-func);
 }
 .nav__menu-container.is-open {
   transform: translateX(0);
@@ -515,10 +516,21 @@ footer {
   font-weight: 600;
   font-style: normal;
 }
+@media (max-width: 430px) {
+  .address {
+    font-size: 22px;
+  }
+}
 .address__link--email {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+}
+@media (max-width: 767px) {
+  .address__link--email {
+    display: inline-block;
+    margin-top: 40px;
+  }
 }
 @media (min-width: 768px) {
   .address {
@@ -536,6 +548,12 @@ footer {
     font-size: inherit;
     line-height: inherit;
     letter-spacing: 0.04em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1157px) {
+  .address__link--email {
+    display: inline-block;
+    margin-top: 4px;
   }
 }
 @media (min-width: 1158px) {
@@ -562,6 +580,11 @@ footer {
 .social-network-list {
   display: flex;
   gap: 56px;
+}
+@media (max-width: 430px) {
+  .social-network-list {
+    gap: 26px;
+  }
 }
 .social-network-list__link {
   display: flex;
@@ -633,6 +656,11 @@ footer {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--main-bg-color);
+}
+@media (max-width: 320px) {
+  .hero-head {
+    font-size: 32px;
+  }
 }
 @media (min-width: 768px) {
   .hero-head {
@@ -714,6 +742,11 @@ footer {
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
+}
+@media (max-width: 767px) {
+  .benefits-list__header {
+    text-align: center;
+  }
 }
 @media (min-width: 1158px) {
   .benefits-list__header {
@@ -807,6 +840,9 @@ footer {
 .team-list__item .social-network-list {
   justify-content: center;
   gap: 24px;
+}
+.team-list__item:last-child {
+  margin-bottom: 0;
 }
 @media (min-width: 768px) {
   .team-list__item {
@@ -1082,8 +1118,10 @@ footer .social-network-list__link:focus {
 }
 @media (max-width: 428px) {
   .modal {
-    width: 392px;
-    padding: 72px 16px 24px 16px;
+    width: 100%;
+    height: 100%;
+    padding: 62px 16px 24px 16px;
+    border-radius: 0;
   }
 }
 

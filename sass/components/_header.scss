@@ -57,6 +57,7 @@
   height: 100%;
   background-color: white;
   transform: translateX(100%);
+  transition: transform 250ms var(--transition-func);
 
   &.is-open {
     transform: translateX(0);
@@ -130,10 +131,17 @@
   font-weight: 600;
   font-style: normal;
 
+  @media (max-width: 430px) {
+    font-size: 22px;
+  }
   &__link--email {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    @media (max-width: 767px) {
+      display: inline-block;
+      margin-top: 40px;
+    }
   }
   @media (min-width: 768px) {
     display: flex;
@@ -147,6 +155,11 @@
     letter-spacing: 0.04em;
 
     &__link--email {
+      @media (max-width: 1157px) {
+        display: inline-block;
+        margin-top: 4px;
+      }
+
       font-weight: inherit;
       font-size: inherit;
       line-height: inherit;
@@ -179,8 +192,11 @@
 }
 .social-network-list {
   display: flex;
-
   gap: 56px;
+
+  @media (max-width: 430px) {
+    gap: 26px;
+  }
   &__link {
     display: flex;
     justify-content: center;

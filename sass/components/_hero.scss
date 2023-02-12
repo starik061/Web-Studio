@@ -74,6 +74,9 @@
   text-transform: capitalize;
   color: var(--main-bg-color);
 
+  @media (max-width: 320px) {
+    font-size: 32px;
+  }
   @media (min-width: 768px) {
     max-width: 496px;
     margin-bottom: 40px;
